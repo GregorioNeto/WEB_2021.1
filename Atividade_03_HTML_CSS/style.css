@@ -5,8 +5,8 @@
 .geral{
     top: 0;
     left: 0;
-    height: 90%;
-    width: 90%;
+    height: 99%;
+    width: 99%;
     background: var(--color-darkblue);
     background-image: linear-gradient(
         115deg,
