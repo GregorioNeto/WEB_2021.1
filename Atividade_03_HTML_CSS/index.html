@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title> Formulário </title>
+            <meta charset="UTF-8"content='text/html'>
+            <link rel="stylesheet" href="style.css" type="text/css"> 
+    </head>
+    <body class = "geral">
+            <div id = "formulario">
+                <h1 align="center">Projeto adaptado - Des web</h1>
+                <span class="subtitulo" ><em align="center">Exemplo de formulário de pesquisa (Survey)</em></span>
+                <div id="forma">
+                    <form action="index.html" method="POST">
+                        <label for="fname"> Nome: </label><br>
+                        <input type="text" id="fname" placeholder="Coloque seu nome..."> <br><br>
+
+                        <label for="email"> Email: </label></br>
+                        <input type="email" id="email" name="email" placeholder="Coloque seu email..."> <br><br>
+                        
+                        <label for="idade"> Idade <span>(opicional):</span> </label></br>
+                        <input type="text" id="idade" name="idade" placeholder="Idade"> <br><br>
+                        
+                        <label for="estado-atual"> Qual opção descreve melhor o seu estado atual? </label><br>  
+                        <select name="estado-atual" id="estado-atual" placeholder="Selecione a ocupação" required>
+                            <option value="" disabled selected >Selecione a ocupação</option>
+                            <option value="estudante">Estudante</option>
+                            <option value="CLT">CLT</option>
+                            <option value="prefiro_nao_dizer">Prefiro não dizer</option>
+                            <option value="outro">Outro</option>
+                        </select>  
+                        <br><br>
+                        
+                        <label for="recomendacao">Você recomendaria este projeto? </label> <br>            
+                        <input type="radio" name="recomendacao" id="certeza" required checked> <label for="certeza" class="opcao">Com certeza! </label> <br>
+                        <input type="radio" name="recomendacao" id="talvez" required> <label for="talvez" class="opcao">Talvez </label> <br>
+                        <input type="radio" name="recomendacao" id="nao_sei" required> <label for="nao_sei" class="opcao">Não sei </label> <br>
+                        <br><br>
+    
+                        <label for="melhorias">O que você gostaria de melhorar? <span>(Selecione quantos quiser)</span> </label> <br>
+                        <input type="checkbox" name="op1" id="op1"> <label class="opcao" for="op1">Ter mais tempo para estudar</label> <br>
+                        <input type="checkbox" name="op2" id="op2"> <label class="opcao" for="op2">Estudar mais o que gosto</label> <br>
+                        <input type="checkbox" name="op3" id="op3"> <label class="opcao" for="op3">Gerência de projetos</label> <br>
+                        <input type="checkbox" name="op4" id="op4"> <label class="opcao" for="op4">NodeJS</label> <br>
+                        <br><br>
+                        
+                        <label for="sugestao">Algum comentário ou sugestão?</label> <br>
+                        <textarea id = "sugestao" name = "sugestao" rows="5" cols="40" placeholder="Insira seu comentário ou sugestão aqui ..."></textarea>
+                        <br><br>
+
+                        <input type="submit" value="Enviar">
+
+                    </form>
+                </div>
+            </div> 
+    </body>
+</html>
