@@ -1,0 +1,101 @@
+*{
+    font-family:Arial, Helvetica, sans-serif
+}
+.corpo{
+    top: 0;
+    left: 0;
+    height: 99%;
+    width: 99%;
+    background-color: rgb(4, 161, 191);
+    }
+
+#title{
+    color: white;
+    font-weight: bold;
+    
+}
+
+#sub1{
+    color: yellow;
+}
+
+#sub2{
+    color: lime;
+}
+
+#sub3{
+    color: dimgrey;
+}
+
+input[type=text]{
+    font-size: 22px;
+    height: 32px;
+    border-radius: 3px;
+    border: 10000px;
+}
+
+#add_button {
+    font-size: 22px;
+    color: rgb(4, 161, 191);
+    width: 130px;
+    height: 35px;
+    background-color: rgb(2, 95, 112);
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+}
+
+#add_button:hover{
+    background-color: rgb(1, 71, 83);
+}
+
+#add_button:active{
+    box-shadow: 0 3px rgba(0, 0, 0, 0.363);
+    transform: translateY(2px);
+}
+
+.div_task{
+    margin: auto;
+    padding-top: 5px;
+    margin-top: 10px;
+    width: auto;
+    height: 30px;
+    background-color: #4eb9cd;
+    border: 1px solid black;
+}
+
+.div_task label{
+    margin-left: 15px;
+    padding-top: 20px;
+
+    font-size: 20px;
+    color: white;
+}
+
+.div_task button{
+    margin-left: 5px;
+    font-size: 18px;
+    background-color: red;
+    border-radius: 3px;
+    color: white;
+    border: none;
+}
+
+.div_task button:hover{
+    background-color: rgb(206, 0, 0);
+}
+
+.div_task button:active{
+    box-shadow: 0 3px rgba(0, 0, 0, 0.363);
+    transform: translateY(2px);
+
+}
+
+.concluida{
+    background-color: #51df70;
+}
+
+.concluida label{
+    color: black;
+}
+

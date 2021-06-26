@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css"> 
+    <title>Tarefas a fazer</title>
+</head>
+<body class="corpo">
+    <div style="text-align: center;">
+
+        <div id="title">
+            <h1>TAREFAS A FAZER (TO DO APP)</h1>
+        </div>
+        
+        <div id="sub1">
+            Adicione texto dentro da caixa de texto para inserir novas atividades.</h3>
+        </div><br>
+        
+        <div id="sub2">
+            Clique no item para marcar a atividade como completada.</h3>
+        </div><br>
+        
+        <div id="sub3">
+            Clique no "X" da atividade para remover a item.</h3>
+        </div><br><br>
+
+        <input type="text" name="new_task" id="new_task" placeholder="Nova Tarefa..." size="80" maxlength="58"> &nbsp;
+        <input type="button" value="Adicionar" id="add_button" onclick="criar()">
+        <br>
+    </div>
+    <div id="div_tasks">
+
+    </div>
+</body>
+</html>
