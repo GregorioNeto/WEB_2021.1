@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+  <head>
+
+  </head>
+  <body>
+
+    <div class="alert alert-success alert-dismissible col s3 m20" role="alert" th:if="${not #strings.isEmpty(mensagem)}">
+      <div class="card-panel cyan darken-1"><span  class="white-text" th:text="${mensagem}"><a><i class="material-icons icon-white">check</i></a></span></div>
+    </div>
+
+  </body>
+
+</html>

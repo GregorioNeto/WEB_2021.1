@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html
+        xmlns: th="http://thymeleafy.org"
+        layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>EventoApi</title>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-wrapper cyan darken-1" >
+                    <a href="#" class="brand-logo"><i class="large material-icons">add_to_queue</i>Cadastro de Eventos</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="/evento" class="waves-effect waves-light btn btn cyan darken-2"><i class="material-icons left">list</i>Lista de evento</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+        <br><br>
+        <form class="container" method="post">
+
+           <th:block th:include="mensagemValidacao"></th:block>
+            <div class="row">
+                <div class="input-field col s12">
+                    Nome: <input type="text" value="" name="nome" required placeholder="Nome do Evento"/>
+                </div>
+
+                <div class="input-field col s6">
+                    Local: <input type="text" value="" name="local" required placeholder="Escreva o nome da Localidade"/>
+                </div>
+
+                <div class="input-field col s3">
+                    Data: <input type="date" value="" name="data" required />
+                </div>
+                <div class="input-field col s3">
+                    Horario: <input type="time" value="" name="horario" required />
+                </div>
+            </div>
+            <div align="center">
+                <button class="waves-effect waves-light btn btn cyan darken-1" type="submit">Salvar</button>
+                <button class="waves-effect waves-light btn btn cyan darken-1" type="reset">Limpar</button>
+            </div>
+
+
+        </form>
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    </body>
+
+</html>

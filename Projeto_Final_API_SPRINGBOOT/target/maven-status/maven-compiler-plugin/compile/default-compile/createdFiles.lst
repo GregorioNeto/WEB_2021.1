@@ -1,0 +1,6 @@
+com\eventoapp\EventoappApplication.class
+com\eventoapp\controllers\EventoController.class
+com\eventoapp\repository\EventoRepository.class
+com\eventoapp\models\Convidado.class
+com\eventoapp\repository\ConvidadoRepository.class
+com\eventoapp\models\Evento.class

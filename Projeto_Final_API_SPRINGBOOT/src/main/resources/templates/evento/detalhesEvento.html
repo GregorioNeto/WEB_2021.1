@@ -1,0 +1,94 @@
+<html
+        xmlns: th="http://thymeleafy.org"
+        layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper cyan darken-1">
+                <a href="#" class="brand-logo"> <span th:text="${evento.nome}"></span></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/evento" class="waves-effect waves-light btn cyan darken-2"><i class="material-icons left">add_circle_outline</i>Lista de evento</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div th:each="evento : ${evento}" class="container">
+            <div class="row">
+                <div class="col s12 m16">
+                    <div class="card cyan darken-1">
+                        <div class="card-content white-text">
+
+                            <table class="white-text">
+                                <tr>
+                                    <th> <span style="font-size: 20">Detalhes:</span></b></th>
+                                </tr>
+                                <tr>
+                                    <th><p>Nome do evento:</p></th> <th><span style="font-size: 14" th:text="${evento.nome}"></span></th>
+                                    <th>Local:</th> <th><span style="font-size: 14" th:text="${evento.local}"></span></th>
+                                </tr>
+                                <tr>
+                                    <th>Data:</th> <th><span style="font-size: 14" th:text="${evento.data}"></span></th>
+                                    <th>Horario:</th> <th><span style="font-size: 14" th:text="${evento.horario}"></span></th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <h5> Cadastre o(s) Convidado(s):</h5>
+            <form method="post">
+                        <div align="center">
+                          <h5><th:block th:include="mensagemValidacao"></th:block></h5>
+                        </div>
+                        Nome:<input type="text" value="" name="nomeConvidado" required placeholder="Nome Completo"/>
+                        RG: <input type="text" value="" name="rg" required placeholder="RG: 00000000000"/>
+                        <div align="center">
+                            <button type="submit" class="waves-effect waves-light btn btn cyan darken-1">Adicionar</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="reset" class="waves-effect waves-light btn btn cyan darken-1" >Limpar</button>
+                        </div>
+                    </form>
+            <div class="divider"></div>
+            <br><br>
+            <div class="row">
+                <div class="col s12 m16">
+                    <div class="card cyan darken-1">
+                        <div class="card-content white-text">
+                            <table class="white-text">
+
+                                <tr>
+                                    <th> <span style="font-size: 20">Convidados do evento:</span></b></th>
+                                </tr>
+                                <div class="container" th:each="convidado : ${convidados}">
+                                    <tr>
+                                        <th><div class="input-field col s6">
+                                            <p><span th:text="${convidado.nomeConvidado}"></span></p>
+                                        </div></th>
+                                        <th><div class="input-field col s3">
+                                            <p><span th:text="${convidado.rg}"><a th:href="@{/deletarConvidado(rg=${convidado.rg})}"><i class="material-icons left">delete</i></a></span></p>
+
+                                        </div></th>
+
+                                    </tr>
+                                 </div>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+    </body>
+</html>
